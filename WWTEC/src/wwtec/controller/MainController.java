@@ -16,9 +16,16 @@ public class MainController {
     
     // pantallas
     private MenuWindow menuView;
+    private ConfigWindow configView;
+    private GameWindow gameView;
+    
+    // modelos
+    private Configuration configuration;
+    private Game game;
 
     //controladores
     private MenuController menuController;
+    private ConfigController configController;
     
     
     public MainController(){
@@ -28,13 +35,22 @@ public class MainController {
     
     
     // -------------------------------------------------- METODOS ----------------------------------------------------------------------
-        private void startMenu(){
+    public void startMenu(){
         this.menuView = new MenuWindow();
-        this.menuController = new MenuController(menuView);
+        this.menuController = new MenuController(menuView, this);
         showWindow(menuView);
     }
+    
+    public void startConfig(){
+        this.configView = new ConfigWindow();
+        this.configController = new ConfigController(this.configView, this);
+    }
+    
+    public void startGame(Game game){
+        // comenzar un juego o continuar uno existente
+    }
 
-
+    
 
 
 
@@ -63,5 +79,13 @@ public class MainController {
     
     
     // ----------------------------------------------- GETTERS AND SETTERS --------------------------------------------------------------
+
+    public MenuWindow getMenuView() {
+        return menuView;
+    }
+
+    public ConfigWindow getConfigView() {
+        return configView;
+    }
     
 }
