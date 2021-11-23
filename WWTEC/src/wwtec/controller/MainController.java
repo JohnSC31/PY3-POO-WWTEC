@@ -26,7 +26,7 @@ public class MainController {
     //controladores
     private MenuController menuController;
     private ConfigController configController;
-    
+    private GameController gameController;
     
     public MainController(){
         startMenu();
@@ -48,6 +48,9 @@ public class MainController {
     
     public void startGame(Game game){
         // comenzar un juego o continuar uno existente
+        this.gameView = new GameWindow();
+        this.gameController = new GameController(gameView, this, game);
+        changeWindow(menuView, gameView);
     }
 
     
