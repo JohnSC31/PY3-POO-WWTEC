@@ -3,11 +3,13 @@ package wwtec.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import wwtec.model.Game;
 import wwtec.view.MenuWindow;
 
 
-public class MenuController implements ActionListener{
+public class MenuController implements ActionListener, KeyListener{
     
     MenuWindow view;
     MainController mainController;
@@ -21,6 +23,7 @@ public class MenuController implements ActionListener{
     
     private void _init_(){
         // action listeners
+        this.view.getTxtfPlayerName().addKeyListener(this);
         this.view.getBtnPlay().addActionListener(this);
         this.view.getBtnLoadGame().addActionListener(this);
         this.view.getBtnConfig().addActionListener(this);
@@ -33,6 +36,7 @@ public class MenuController implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(view.getBtnPlay())){
             // se presiona jugar
+            mainController.startGame(null); // se inicia un nuevo juego
         }
         
         if(e.getSource().equals(view.getBtnLoadGame())){
@@ -53,6 +57,24 @@ public class MenuController implements ActionListener{
         
         
         
+    }
+    
+    // ------------------------------------------------ KEY LISTENERS --------------------------------------S
+    @Override
+    public void keyTyped(KeyEvent e) {
+        
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        if(e.getSource().equals(view.getTxtfPlayerName())){
+            view.getBtnPlay().setEnabled(!view.getTxtfPlayerName().getText().equals(""));
+        }
     }
     
 }
