@@ -15,17 +15,24 @@ public class Game {
     private int level;
     private BattleCell[][] battleField; // campo de batalla, compuesto de celdas de batalla
     // private ejercito
+    private Village village;
+    
+    public enum ArmyType {
+        LAND, 
+        AIR
+    }
     
     public Game(){
         this.level = 1;
         // inicializacion del campo de batalla
-        this.battleField = new BattleCell[BATTLEFIELD_ROWS][BATTLEFIELD_COLS];
+        
         initBattleField();
     }
     
     // ------------------------------------------------------- METODOS ------------------------------------------------------------
     
     private void initBattleField(){
+        this.battleField = new BattleCell[BATTLEFIELD_ROWS][BATTLEFIELD_COLS];
         for(int i = 0; i < BATTLEFIELD_ROWS; i++){
             for(int j = 0; j < BATTLEFIELD_COLS; j++){
                 this.battleField[i][j] = new BattleCell();
@@ -33,6 +40,12 @@ public class Game {
         }
     }
     
+    
+    // genera un nuevo pueblo de forma aleatoria y lo coloca en la matriz y le setea los valores correspondientes
+    public void generateVillage(){
+        
+        
+    }
     
     
     // ------------------------------------------------------- GETTERS AND SETTERS ------------------------------------------------------------
