@@ -22,7 +22,7 @@ public abstract class GameEntity {
     
     
     // ---------------------------------------- METODOS ----------------------------------------------------------------------------
-    // metodo que le permita recibir ataques morir
+    // metodo que le permita recibir ataques morir o ser destruido
     
     // metodo para morir o desaparecer
     
