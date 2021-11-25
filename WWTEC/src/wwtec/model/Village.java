@@ -18,7 +18,7 @@ public class Village extends ArrayList<Structure>{
         this.add(newStructure);
     }
     
-    // el procentaje del pueblo que sigue en pie
+    // el procentaje del pueblo que sigue en pie a 100 se le resta este resultado y obtenemos el porcentaje de destruccion
     public int lifePercentage(){
         int actualLife = 0;
         for(int i = 0; i < this.size(); i++){
