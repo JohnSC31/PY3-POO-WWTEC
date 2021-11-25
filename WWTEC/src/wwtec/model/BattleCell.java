@@ -12,7 +12,10 @@ public class BattleCell extends JLabel{
     GameEntity element;
     
     public BattleCell(){
-
+        this.element = null;
+        this.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
+        this.setOpaque(true);
+        this.setBackground(new Color(53, 130, 97));
     }
 
     public GameEntity getElement() {
