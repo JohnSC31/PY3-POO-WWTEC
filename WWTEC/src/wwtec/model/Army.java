@@ -33,7 +33,13 @@ public abstract class Army implements iAttack{
         this.apparitionLevel = apparitionLevel;
         this.price = price;
     }
-
+    
+    public void print(){
+        System.out.println("Nombre: " + name + " Vida: " + life + " Golpes por s.: " + hit + " Espacios: " + spaces + " Nivel de aparicion: " + apparitionLevel + " Precio: " + price);
+    
+    }
+    
+    
     public String getName() {
         return name;
     }
@@ -54,7 +60,7 @@ public abstract class Army implements iAttack{
         return life;
     }
 
-    public void setLive(int life) {
+    public void setLife(int life) {
         this.life = life;
     }
 
