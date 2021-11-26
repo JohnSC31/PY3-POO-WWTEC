@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
 public abstract class Army implements iAttack{
     
     private String name;
-    private ImageIcon aparence;
+    //private ImageIcon aparence;
     private int life; 
     private int hit; // cantidad de golpes por segundo
     private int level; // nivel de aparición
@@ -23,9 +23,9 @@ public abstract class Army implements iAttack{
     private int apparitionLevel;
     private int price; 
 
-    public Army(String name, ImageIcon aparence, int life, int hit, int level, int spaces, int apparitionLevel, int price) {
+    public Army(String name, int life, int hit, int level, int spaces, int apparitionLevel, int price) {
         this.name = name;
-        this.aparence = aparence;
+        //this.aparence = aparence;
         this.life = life;
         this.hit = hit;
         this.level = level;
@@ -48,13 +48,7 @@ public abstract class Army implements iAttack{
         this.name = name;
     }
 
-    public ImageIcon getAparence() {
-        return aparence;
-    }
-
-    public void setAparence(ImageIcon aparence) {
-        this.aparence = aparence;
-    }
+    
 
     public int getLife() {
         return life;

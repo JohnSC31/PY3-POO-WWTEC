@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import wwtec.view.ConfigWindow;
@@ -16,6 +18,8 @@ public class ConfigController implements ActionListener {
     MainController mainController;
     
     private ArrayList<Army> armyArray;
+    private final Gson gson = new Gson();
+    private final String ARMYFILEPATH = "./src/media/army.txt";
     private Army dragon, balloon, cannon, sprinkles, barbarian, pekka, prince, hogRider, archer, wizard;
     private ImageIcon dragonIcon, balloonIcon, cannonIcon, sprinklesIcon, barbarianIcon, pekkaIcon, princeIcon, hogRiderIcon, archerIcon, wizardIcon;
     
@@ -43,20 +47,21 @@ public class ConfigController implements ActionListener {
         loadArmyImages();
         setlblImages();
         createArmy();
+        chargeConfiguration();
     }
     
     
     public void createArmy(){
-        this.dragon = new Aerial("Dragon", dragonIcon, 0, 0, 0, 0, 0, 0);
-        this.balloon = new Aerial("Balloon", balloonIcon, 0, 0, 0, 0, 0, 0);
-        this.archer = new MidRange("Archer", archerIcon, 0, 0, 0, 0, 0, 0);
-        this.wizard = new MidRange("Wizard", wizardIcon, 0, 0, 0, 0, 0, 0);
-        this.barbarian = new ContactSoldier("Barbarian", barbarianIcon, 0, 0, 0, 0, 0 ,0);
-        this.pekka = new ContactSoldier("PEKKA", pekkaIcon, 0 ,0 ,0 ,0 ,0 ,0);
-        this.prince = new Impact("Prince", princeIcon, 0, 0, 0, 0, 0, 0);
-        this.hogRider = new Impact("HogRider", hogRiderIcon, 0, 0, 0, 0, 0, 0);
-        this.cannon = new Collision("Cannon" , cannonIcon, 0, 0, 0, 0, 0, 0);
-        this.sprinkles = new Collision("Sprinkles" , sprinklesIcon, 0, 0, 0, 0, 0, 0);
+        this.dragon = new Aerial("Dragon", 0, 0, 0, 0, 0, 0);
+        this.balloon = new Aerial("Balloon", 0, 0, 0, 0, 0, 0);
+        this.archer = new MidRange("Archer", 0, 0, 0, 0, 0, 0);
+        this.wizard = new MidRange("Wizard", 0, 0, 0, 0, 0, 0);
+        this.barbarian = new ContactSoldier("Barbarian", 0, 0, 0, 0, 0 ,0);
+        this.pekka = new ContactSoldier("PEKKA",  0 ,0 ,0 ,0 ,0 ,0);
+        this.prince = new Impact("Prince",  0, 0, 0, 0, 0, 0);
+        this.hogRider = new Impact("HogRider", 0, 0, 0, 0, 0, 0);
+        this.cannon = new Collision("Cannon" ,  0, 0, 0, 0, 0, 0);
+        this.sprinkles = new Collision("Sprinkles" ,  0, 0, 0, 0, 0, 0);
         
         armyArray.add(dragon);
         armyArray.add(balloon);
@@ -167,10 +172,95 @@ public class ConfigController implements ActionListener {
         this.prince.setPrice(Integer.parseInt(view.getTxfPriceI1().getText()));
         this.hogRider.setPrice(Integer.parseInt(view.getTxfPriceI2().getText()));
         
-        
+        saveArmyArray();
         for (Army a : armyArray) {
             a.print();
         }
+    }
+    
+    private void chargeConfiguration(){
+        getArmyArray();
+        
+        //cargar barbaro
+        view.getTxfLifeC1().setText(armyArray.get(4).getLife() + "");
+        view.getTxfHitsC1().setText(armyArray.get(4).getHit() + "");
+        view.getTxfSpacesC1().setText(armyArray.get(4).getSpaces() + "");
+        view.getTxfLevelC1().setText(armyArray.get(4).getApparitionLevel() + "");
+        view.getTxfPriceC1().setText(armyArray.get(4).getPrice() + "");
+        
+        //cargar pekka
+        view.getTxfLifeC2().setText(armyArray.get(5).getLife() + "");
+        view.getTxfHitsC2().setText(armyArray.get(5).getHit() + "");
+        view.getTxfSpacesC2().setText(armyArray.get(5).getSpaces() + "");
+        view.getTxfLevelC2().setText(armyArray.get(5).getApparitionLevel() + "");
+        view.getTxfPriceC2().setText(armyArray.get(5).getPrice() + "");
+        
+        //cargar dragon
+        view.getTxfLifeA1().setText(armyArray.get(0).getLife() + "");
+        view.getTxfHitsA1().setText(armyArray.get(0).getHit() + "");
+        view.getTxfSpacesA1().setText(armyArray.get(0).getSpaces() + "");
+        view.getTxfLevelA1().setText(armyArray.get(0).getApparitionLevel() + "");
+        view.getTxfPriceA1().setText(armyArray.get(0).getPrice() + "");
+        
+        //cargar globo
+        view.getTxfLifeA2().setText(armyArray.get(1).getLife() + "");
+        view.getTxfHitsA2().setText(armyArray.get(1).getHit() + "");
+        view.getTxfSpacesA2().setText(armyArray.get(1).getSpaces() + "");
+        view.getTxfLevelA2().setText(armyArray.get(1).getApparitionLevel() + "");
+        view.getTxfPriceA2().setText(armyArray.get(1).getPrice() + "");
+        
+        
+        //cargar arquera
+        view.getTxfLifeM1().setText(armyArray.get(2).getLife() + "");
+        view.getTxfHitsM1().setText(armyArray.get(2).getHit() + "");
+        view.getTxfSpacesM1().setText(armyArray.get(2).getSpaces() + "");
+        view.getTxfLevelM1().setText(armyArray.get(2).getApparitionLevel() + "");
+        view.getTxfPriceM1().setText(armyArray.get(2).getPrice() + "");
+        
+        //cargar mago
+        view.getTxfLifeM2().setText(armyArray.get(3).getLife() + "");
+        view.getTxfHitsM2().setText(armyArray.get(3).getHit() + "");
+        view.getTxfSpacesM2().setText(armyArray.get(3).getSpaces() + "");
+        view.getTxfLevelM2().setText(armyArray.get(3).getApparitionLevel() + "");
+        view.getTxfPriceM2().setText(armyArray.get(3).getPrice() + "");
+        
+        //cargar cañón
+        view.getTxfLifeCo1().setText(armyArray.get(8).getLife() + "");
+        view.getTxfHitsCo1().setText(armyArray.get(8).getHit() + "");
+        view.getTxfSpacesCo1().setText(armyArray.get(8).getSpaces() + "");
+        view.getTxfLevelCo1().setText(armyArray.get(8).getApparitionLevel() + "");
+        view.getTxfPriceCo1().setText(armyArray.get(8).getPrice() + "");
+        
+        //cargar chispitas
+        view.getTxfLifeCo2().setText(armyArray.get(9).getLife() + "");
+        view.getTxfHitsCo2().setText(armyArray.get(9).getHit() + "");
+        view.getTxfSpacesCo2().setText(armyArray.get(9).getSpaces() + "");
+        view.getTxfLevelCo2().setText(armyArray.get(9).getApparitionLevel() + "");
+        view.getTxfPriceCo2().setText(armyArray.get(9).getPrice() + "");
+        
+        //cargarPrincipe
+        view.getTxfLifeI1().setText(armyArray.get(6).getLife() + "");
+        view.getTxfHitsI1().setText(armyArray.get(6).getHit() + "");
+        view.getTxfSpacesI1().setText(armyArray.get(6).getSpaces() + "");
+        view.getTxfLevelI1().setText(armyArray.get(6).getApparitionLevel() + "");
+        view.getTxfPriceI1().setText(armyArray.get(6).getPrice() + "");
+        
+        //cargarMontapuerco
+        view.getTxfLifeI2().setText(armyArray.get(7).getLife() + "");
+        view.getTxfHitsI2().setText(armyArray.get(7).getHit() + "");
+        view.getTxfSpacesI2().setText(armyArray.get(7).getSpaces() + "");
+        view.getTxfLevelI2().setText(armyArray.get(7).getApparitionLevel() + "");
+        view.getTxfPriceI2().setText(armyArray.get(7).getPrice() + "");
+    }
+    
+    private void saveArmyArray(){
+        String matchJSON = gson.toJson(armyArray);
+        FileManager.writeToFile(ARMYFILEPATH, matchJSON);
+    }
+    
+    private void getArmyArray(){
+        String fileStr = FileManager.readFile(ARMYFILEPATH);
+        this.armyArray = gson.fromJson(fileStr, new TypeToken<ArrayList<Army>>(){}.getType()); 
     }
     
     

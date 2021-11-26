@@ -13,17 +13,10 @@ import javax.swing.ImageIcon;
  */
 public class Collision extends Army {
     
-    private String name;
-    private ImageIcon aparence;
-    private int life; 
-    private int hit; // cantidad de golpes por segundo
-    private int level; // nivel de aparición
-    private int spaces; // espacios que ocupa
-    private int apparitionLevel;
-    private int price;
+    
 
-    public Collision(String name, ImageIcon aparence, int life, int hit, int level, int spaces, int apparitionLevel, int price) {
-        super(name, aparence, life, hit, level, spaces, apparitionLevel, price);
+    public Collision(String name, int life, int hit, int level, int spaces, int apparitionLevel, int price) {
+        super(name, life, hit, level, spaces, apparitionLevel, price);
     }
 
     @Override
