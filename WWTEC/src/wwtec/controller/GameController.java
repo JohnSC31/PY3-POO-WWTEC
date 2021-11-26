@@ -2,13 +2,15 @@
 package wwtec.controller;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import wwtec.model.Game;
 import static wwtec.model.Game.*;
 import wwtec.view.GameWindow;
 
 
-public class GameController {
+public class GameController implements ActionListener{
     
     GameWindow view;
     MainController mainController;
@@ -25,6 +27,7 @@ public class GameController {
     
     // inicializacion de la ventana
     private void _init_(){
+        this.view.getBtnGenLevel().addActionListener(this);
         setBattleField();
     }
     
@@ -34,17 +37,21 @@ public class GameController {
         for(int i = 0; i < BATTLEFIELD_ROWS; i++){
             for(int j = 0; j < BATTLEFIELD_COLS; j++){
                 game.getBattleField()[i][j].setBounds(x, y, BATTLE_CELL_SIZE, BATTLE_CELL_SIZE);
-                game.getBattleField()[i][j].setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
-
-                game.getBattleField()[i][j].setOpaque(true);
-                if(i > 2 && i < 18 && j > 2 && j < 18) game.getBattleField()[i][j].setBackground(Color.RED);
-                if(i == 10 && j == 10) game.getBattleField()[i][j].setBackground(Color.GREEN);
+//                if(i > 2 && i < 18 && j > 2 && j < 18) game.getBattleField()[i][j].setBackground(Color.RED);
+//                if(i == 10 && j == 10) game.getBattleField()[i][j].setBackground(Color.GREEN);
                 view.getPnlBattleField().add(game.getBattleField()[i][j]);
                 
                 x += BATTLE_CELL_SIZE;
             }
             x = 0;
             y += BATTLE_CELL_SIZE;
+        }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource().equals(this.view.getBtnGenLevel())){
+            this.game.generateVillage();
         }
     }
     

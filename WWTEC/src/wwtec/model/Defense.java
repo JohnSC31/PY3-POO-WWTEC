@@ -13,7 +13,7 @@ public class Defense extends Structure implements iAttack{
     private ArmyType objType;
     private String name;
     
-    public Defense(int i, int j, ImageIcon icon, int life, boolean passThrough, ArmyType objType, int range, int damage, String name) {
+    public Defense(int i, int j, ImageIcon icon, int life, ArmyType objType, int range, int damage, String name, boolean passThrough) {
         super(i, j, icon, life, passThrough);
         this.objType = objType;
         this.range = range;
