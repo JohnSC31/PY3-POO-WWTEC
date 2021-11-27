@@ -19,6 +19,7 @@ public class Game {
     public static final int VILLAGE_MIN = 3;
     public static final int VILLAGE_MAX = 17;
     
+    private String playerName; // nombre del jugador creador del juego
     
     //private MainController mainController; (no veo la necesidad de la referencia del controlador principal)
     private int level;
@@ -26,29 +27,46 @@ public class Game {
     // private ejercito
     private Village village;
     
-    // imagenes de las defensas
-    private ImageIcon townHallIcon;
-    private ImageIcon airDefenseIcon;
-    private ImageIcon bombIcon;
-    private ImageIcon cannonIcon;
-    private ImageIcon mortarIcon;
-    private ImageIcon towerIcon;
-    private ImageIcon wallIcon;
+    // imagenes de las defensa
+    public final String townHallIcon = "TownHall.png";
+    public final String airDefenseIcon = "Air_Defense.png";
+    public final String bombIcon = "Bomb.png";
+    public final String cannonIcon = "Cannon.png";
+    public final String mortarIcon = "Mortar.png";
+    public final String towerIcon = "Tower.png";
+    public final String wallIcon = "Wall.png";
     
-    // limites de la aldea
+    // variables para el crecimiento de la aldeas
+    private int townHallBooty = 1000; // dato inicial
     
+    private int airDefenseLife = 90;
+    private int airDefenseDamage = 20;
+    
+    private int bombLife = 1;
+    private int bombDamage = 60;
+    
+    private int cannonLife = 50;
+    private int cannonDamage = 15;
+    
+    private int mortarLife = 60;
+    private int mortarDamage = 25;
+    
+    private int towerLife = 40;
+    private int towerDamage = 25;
+    
+    private int wallLife = 50;
     
     public enum ArmyType {
         LAND, 
         AIR
     }
     
-    public Game(){
+    public Game(String playerName){
         this.level = 1;
+        this.playerName = playerName;
         // inicializacion del campo de batalla
-        
         initBattleField();
-        loadDefenseImages();
+        generateVillage(); // se genera la aldea inicial
     }
     
     // ------------------------------------------------------- METODOS ------------------------------------------------------------
@@ -62,44 +80,49 @@ public class Game {
         }
     }
     
-    private void loadDefenseImages(){
+    private ImageIcon loadDefenseImage(String fileName){
+        ImageIcon icon = null;
         try {
-            this.townHallIcon = new ImageIcon(new File("./src/media/TownHall.png").getCanonicalPath());
-            this.airDefenseIcon = new ImageIcon(new File("./src/media/Air_Defense.png").getCanonicalPath());
-            this.bombIcon = new ImageIcon(new File("./src/media/Bomb.png").getCanonicalPath());
-            this.cannonIcon = new ImageIcon(new File("./src/media/Cannon.png").getCanonicalPath());
-            this.mortarIcon = new ImageIcon(new File("./src/media/Mortar.png").getCanonicalPath());
-            this.towerIcon = new ImageIcon(new File("./src/media/Tower.png").getCanonicalPath());
-            this.wallIcon = new ImageIcon(new File("./src/media/Wall.png").getCanonicalPath());
+            icon = new ImageIcon(new File("./src/media/" + fileName).getCanonicalPath());
         } catch (IOException ex) {
             System.out.println("Error al cargar imagenes de las defensas");
         }
+        return icon;
     }
     
     
     // genera un nuevo pueblo de forma aleatoria y lo coloca en la matriz y le setea los valores correspondientes
     public void generateVillage(){
-        // resetear la aldea anterior
+        unsetVillage();
         generateVillageWalls();
-        displayElementBattlefield(new TownHall(10, 10, this.townHallIcon, 100, 2000)); // en el centro
+        displayElementBattlefield(new TownHall(10, 10, loadDefenseImage(this.townHallIcon), 100, townHallBooty)); // en el centro
         generateVillageDefenses();
     }
     
     private void generateVillageWalls(){
         for(int i = VILLAGE_MIN; i <= VILLAGE_MAX; i++){
-            displayElementBattlefield(new Wall(VILLAGE_MIN, i, this.wallIcon, 50)); // horizontal arriba
-            displayElementBattlefield(new Wall(VILLAGE_MAX, i, this.wallIcon, 50)); // horizontal abajos
-            displayElementBattlefield(new Wall(i, VILLAGE_MIN, this.wallIcon, 50)); // vertical izquierda
-            displayElementBattlefield(new Wall(i, VILLAGE_MAX, this.wallIcon, 50)); // vertical derecha
+            displayElementBattlefield(new Wall(VILLAGE_MIN, i, loadDefenseImage(this.wallIcon), 50)); // horizontal arriba
+            displayElementBattlefield(new Wall(VILLAGE_MAX, i, loadDefenseImage(this.wallIcon), 50)); // horizontal abajos
+            displayElementBattlefield(new Wall(i, VILLAGE_MIN, loadDefenseImage(this.wallIcon), 50)); // vertical izquierda
+            displayElementBattlefield(new Wall(i, VILLAGE_MAX, loadDefenseImage(this.wallIcon), 50)); // vertical derecha
+        }
+    }
+    
+    public void unsetVillage(){
+        for(int i = 0; i < BATTLEFIELD_ROWS; i++){
+            for(int j = 0; j < BATTLEFIELD_COLS; j++){
+                this.battleField[i][j].setElement(null);
+                this.battleField[i][j].setIcon(null);
+            }   
         }
     }
     
     private void generateVillageDefenses(){
-        generateVillageDefense(4, this.cannonIcon, 60, ArmyType.LAND, 5, 15, "Cannon", false); // 4 canones
-        generateVillageDefense(2, this.mortarIcon, 50, ArmyType.LAND, 10, 20, "Mortar", false); // 2 morteros
-        generateVillageDefense(1, this.airDefenseIcon, 90, ArmyType.LAND, 15, 20, "AirDefense", false); // 1 defensa aerea
-        generateVillageDefense(3, this.towerIcon, 80, ArmyType.LAND, 6, 15, "Tower", false); // 3 torres
-        generateVillageDefense(2, this.bombIcon, 10, ArmyType.LAND, 2, 50, "Bomb", true); // 2 bombas
+        generateVillageDefense(4, loadDefenseImage(this.cannonIcon), cannonLife, ArmyType.LAND, 5, cannonDamage, "Cannon", false); // 4 canones
+        generateVillageDefense(2, loadDefenseImage(this.mortarIcon), mortarLife, ArmyType.LAND, 10, mortarDamage, "Mortar", false); // 2 morteros
+        generateVillageDefense(1, loadDefenseImage(this.airDefenseIcon), airDefenseLife, ArmyType.LAND, 15, airDefenseDamage, "AirDefense", false); // 1 defensa aerea
+        generateVillageDefense(3, loadDefenseImage(this.towerIcon), towerLife, ArmyType.LAND, 6, towerDamage, "Tower", false); // 3 torres
+        generateVillageDefense(2, loadDefenseImage(this.bombIcon), bombLife, ArmyType.LAND, 2, bombDamage, "Bomb", true); // 2 bombas
         
         
     }
@@ -123,8 +146,6 @@ public class Game {
         if(validElementBattlefield(element.getiCoord(), element.getjCoord())){
             battleField[element.getiCoord()][element.getjCoord()].setElement(element);
             battleField[element.getiCoord()][element.getjCoord()].setIcon(MainController.resizeIcon(element.getIcon(), BATTLE_CELL_SIZE , BATTLE_CELL_SIZE));
-        }else{
-            System.out.println("No se pudo setear");
         }
 
     }
@@ -144,14 +165,53 @@ public class Game {
         battleField[element.getiCoord()][element.getjCoord()].setElement(null);
         battleField[element.getiCoord()][element.getjCoord()].setIcon(null);
     }
+    
+    // realiza una suma en el nivel y en las estatisticas de las defensas y en el botin
+    public void levelUp(){
+        this.level++;
+        
+        // aumento del botin aumento del actual entre un 100 y un 250 % esos numeros deben venir de las configuraciones
+        townHallBooty += ((new Random().nextInt(250-100+1) + 100) * townHallBooty / 100);
+        
+        // aumento de la vida y dano de las defensas entre un 50 y 100%
+        airDefenseLife += ((new Random().nextInt(100-50+1) + 50) * airDefenseLife / 100);
+        airDefenseDamage += ((new Random().nextInt(100-50+1) + 50) * airDefenseDamage / 100);
+        
+        bombLife += ((new Random().nextInt(100-50+1) + 50) * bombLife / 100);
+        bombDamage += ((new Random().nextInt(100-50+1) + 50) * bombDamage / 100);
+        
+        cannonLife += ((new Random().nextInt(100-50+1) + 50) * cannonLife / 100);
+        cannonDamage += ((new Random().nextInt(100-50+1) + 50) * cannonDamage / 100);
+        
+        mortarLife += ((new Random().nextInt(100-50+1) + 50) * mortarLife / 100);
+        mortarDamage += ((new Random().nextInt(100-50+1) + 50) * mortarDamage / 100);
+        
+        towerLife += ((new Random().nextInt(100-50+1) + 50) * towerLife / 100);
+        towerDamage += ((new Random().nextInt(100-50+1) + 50) * towerDamage / 100);
+        
+        wallLife += ((new Random().nextInt(100-50+1) + 50) * wallLife / 100);
+        
+    }
+    
+    
     // ------------------------------------------------------- GETTERS AND SETTERS ------------------------------------------------------------
     public int getLevel() {
         return level;
     }
 
+    public int getTownHallBooty() {
+        return townHallBooty;
+    }
+
     public BattleCell[][] getBattleField() {
         return battleField;
     }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+    
+    
     
     
     

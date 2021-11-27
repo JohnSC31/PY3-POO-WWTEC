@@ -21,10 +21,16 @@ public class GameWindow extends javax.swing.JFrame implements iWindow{
 
         lblLevel = new javax.swing.JLabel();
         pnlBattleField = new javax.swing.JPanel();
+        lblDestruction = new javax.swing.JLabel();
+        btnAttack = new javax.swing.JButton();
+        btnNextLevel = new javax.swing.JButton();
+        lblBooty = new javax.swing.JLabel();
+        lblBooty1 = new javax.swing.JLabel();
+        btnAdminArmy = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        btnArmy = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        btnGenLevel = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,30 +51,56 @@ public class GameWindow extends javax.swing.JFrame implements iWindow{
             .addGap(0, 630, Short.MAX_VALUE)
         );
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Destruccion: 0%");
+        lblDestruction.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblDestruction.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDestruction.setText("Destruccion: 0%");
 
-        btnArmy.setText("Desplegar");
+        btnAttack.setText("Atacar");
 
-        jButton1.setText("Siguiente nivel");
+        btnNextLevel.setText("Siguiente nivel");
 
-        btnGenLevel.setText("Generar");
+        lblBooty.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblBooty.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblBooty.setText("0000");
+
+        lblBooty1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblBooty1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblBooty1.setText("Botin Actual");
+
+        btnAdminArmy.setText("Ejercito");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("0/20");
+
+        jLabel1.setText("Espacio:");
+
+        jLabel3.setText("Dinero:");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("0000");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnGenLevel)
-                .addGap(26, 26, 26)
-                .addComponent(pnlBattleField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblDestruction, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBooty, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBooty1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pnlBattleField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAttack, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnNextLevel, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                    .addComponent(btnAdminArmy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnArmy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -82,16 +114,27 @@ public class GameWindow extends javax.swing.JFrame implements iWindow{
                 .addComponent(lblLevel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnNextLevel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAdminArmy)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)
+                        .addGap(120, 120, 120)
+                        .addComponent(btnAttack))
                     .addComponent(pnlBattleField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(13, 13, 13)
-                                .addComponent(jButton1)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnArmy))
-                            .addComponent(btnGenLevel))
+                        .addComponent(lblDestruction)
+                        .addGap(23, 23, 23)
+                        .addComponent(lblBooty1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblBooty)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -101,10 +144,16 @@ public class GameWindow extends javax.swing.JFrame implements iWindow{
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnArmy;
-    private javax.swing.JButton btnGenLevel;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnAdminArmy;
+    private javax.swing.JButton btnAttack;
+    private javax.swing.JButton btnNextLevel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel lblBooty;
+    private javax.swing.JLabel lblBooty1;
+    private javax.swing.JLabel lblDestruction;
     private javax.swing.JLabel lblLevel;
     private javax.swing.JPanel pnlBattleField;
     // End of variables declaration//GEN-END:variables
@@ -117,9 +166,28 @@ public class GameWindow extends javax.swing.JFrame implements iWindow{
         return pnlBattleField;
     }
 
-    public JButton getBtnGenLevel() {
-        return btnGenLevel;
+    public JButton getBtnNextLevel() {
+        return btnNextLevel;
     }
+
+    public JLabel getLblBooty() {
+        return lblBooty;
+    }
+
+    public JLabel getLblDestruction() {
+        return lblDestruction;
+    }
+
+    public JButton getBtnAdminArmy() {
+        return btnAdminArmy;
+    }
+
+    public JButton getBtnAttack() {
+        return btnAttack;
+    }
+    
+    
+    
 
     
     
