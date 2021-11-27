@@ -18,6 +18,8 @@ public class MainController {
     private MenuWindow menuView;
     private ConfigWindow configView;
     private GameWindow gameView;
+    private ArmyWindow armyView;
+    private GamesWindow gamesView;
     
     // modelos
     private Configuration configuration;
@@ -27,6 +29,8 @@ public class MainController {
     private MenuController menuController;
     private ConfigController configController;
     private GameController gameController;
+    private ArmyController armyController;
+    private GamesController gamesController;
     
     public MainController(){
         startMenu();
@@ -52,8 +56,20 @@ public class MainController {
         this.gameController = new GameController(gameView, this, game);
         changeWindow(menuView, gameView);
     }
-
     
+    // adminsitracion del ejercito
+    public void startAdminArmy(Game game){
+        this.armyView = new ArmyWindow();
+        this.armyController = new ArmyController(this.armyView, this, game);
+        showWindow(armyView);
+    }
+    
+    // las partidas guardadas
+    public void startGames(){
+        this.gamesView = new GamesWindow();
+        this.gamesController = new GamesController(this.gamesView, this);
+        changeWindow(this.menuView, this.gamesView);
+    }
 
 
 
@@ -90,5 +106,10 @@ public class MainController {
     public ConfigWindow getConfigView() {
         return configView;
     }
+
+    public GameController getGameController() {
+        return gameController;
+    }
+    
     
 }
