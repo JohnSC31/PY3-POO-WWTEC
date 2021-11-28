@@ -136,7 +136,7 @@ public class Game {
             
             }while(!validElementBattlefield(iPos, jPos));
             
-            displayElementBattlefield(new Defense(iPos, jPos, icon, life, objType, range, damage, name, passThrough));
+            displayElementBattlefield(new Defense(iPos, jPos, icon, life, objType, range, damage, name, passThrough, this.battleField));
         }
     }
     

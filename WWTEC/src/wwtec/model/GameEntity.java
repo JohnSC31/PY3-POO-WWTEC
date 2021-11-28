@@ -11,6 +11,7 @@ public abstract class GameEntity {
     private ImageIcon icon; // representacion basica visua del elemento
     private int life;
     private boolean passThrough;
+    private boolean dead; // indica si el elemento ha sido destruido o esta muerto
 
     public GameEntity(int iCoord, int jCoord, ImageIcon icon, int life, boolean passThrough) {
         this.iCoord = iCoord;
@@ -18,14 +19,20 @@ public abstract class GameEntity {
         this.icon = icon;
         this.life = life;
         this.passThrough = passThrough;
+        this.dead = false;
     }
     
     
     // ---------------------------------------- METODOS ----------------------------------------------------------------------------
     // metodo que le permita recibir ataques morir o ser destruido
-    
+    public void receiveDamage(int damage){
+        this.life-= damage;
+        if(life <= 0) die();
+    }
     // metodo para morir o desaparecer
-    
+    public void die(){
+        this.dead = true;
+    }
     
     
     // ------------------------------------- GETTERS AND SETTERS --------------------------------------------
@@ -68,6 +75,10 @@ public abstract class GameEntity {
 
     public void setPassThrough(boolean passThrough) {
         this.passThrough = passThrough;
+    }
+
+    public boolean isDead() {
+        return dead;
     }
     
     
