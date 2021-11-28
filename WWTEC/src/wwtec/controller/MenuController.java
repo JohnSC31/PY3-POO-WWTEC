@@ -36,11 +36,13 @@ public class MenuController implements ActionListener, KeyListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(view.getBtnPlay())){
             // se presiona jugar
-            mainController.startGame(null); // se inicia un nuevo juego
+            // creamos una nueva partida con el nombre del jugador
+            mainController.startGame(new Game(view.getTxtfPlayerName().getText())); // se inicia un nuevo juego
         }
         
         if(e.getSource().equals(view.getBtnLoadGame())){
             // se presiona cargar partida
+            mainController.startGames();
         }
         
         if(e.getSource().equals(view.getBtnConfig())){
@@ -53,10 +55,7 @@ public class MenuController implements ActionListener, KeyListener{
             // se presiona cerrar
             System.exit(0);
         }
-        
-        
-        
-        
+   
     }
     
     // ------------------------------------------------ KEY LISTENERS --------------------------------------S
