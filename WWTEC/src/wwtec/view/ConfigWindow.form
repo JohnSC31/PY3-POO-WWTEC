@@ -23,56 +23,37 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel1" max="32767" attributes="0"/>
-                  <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" max="32767" attributes="0"/>
+                          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="pnlMidRange1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="pnlMidRange2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="pnlCollision1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="pnlImpact1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="pnlImpact2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                              <EmptySpace min="-2" pref="941" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="bntSave" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnBack" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="bntSave" min="-2" max="-2" attributes="0"/>
-                                          <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="pnlCollision2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="pnlContact1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="pnlContact2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="pnlAerial1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="pnlAerial2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="pnlContact1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jFileChooser1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel8" min="-2" pref="143" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -83,39 +64,21 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <Component id="jLabel8" min="-2" pref="41" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="pnlContact1" min="-2" max="-2" attributes="0"/>
-                  <Component id="pnlContact2" min="-2" max="-2" attributes="0"/>
-                  <Component id="pnlAerial1" min="-2" max="-2" attributes="0"/>
-                  <Component id="pnlAerial2" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="pnlMidRange1" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="pnlCollision1" min="-2" max="-2" attributes="0"/>
-                          <Component id="pnlMidRange2" min="-2" max="-2" attributes="0"/>
-                          <Component id="pnlCollision2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="pnlContact1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
                       <Component id="bntSave" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="btnBack" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="pnlImpact1" min="-2" max="-2" attributes="0"/>
-                          <Component id="pnlImpact2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jFileChooser1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -277,100 +240,84 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblContact1" min="-2" pref="94" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="LifeC1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfLifeC1" min="-2" pref="54" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="priceC1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfPriceC1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="spaceC1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfSpacesC1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="HitsC1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfHitsC1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="levelC1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
-                          <Component id="txfLevelC1" min="-2" pref="54" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel9" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              <Component id="LifeC1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="HitsC1" min="-2" max="-2" attributes="0"/>
+                              <Component id="spaceC1" min="-2" max="-2" attributes="0"/>
+                              <Component id="levelC1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="priceC1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jComboBox1" pref="261" max="32767" attributes="0"/>
+                              <Component id="txfLifeC2" max="32767" attributes="0"/>
+                              <Component id="txfHitsC1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txfLifeC1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txfSpacesC1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txfLevelC1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txfPriceC1" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="nameContact1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="nameContact1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LifeC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLifeC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="HitsC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfHitsC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spaceC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfSpacesC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="levelC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLevelC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="priceC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfPriceC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="lblContact1" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel9" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="txfLifeC2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txfLifeC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="LifeC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txfHitsC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="HitsC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txfSpacesC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spaceC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="levelC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txfLevelC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="priceC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txfPriceC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblContact1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Contact1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="nameContact1">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Barbarian - Contact Soldier"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="LifeC1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Vida:"/>
@@ -436,319 +383,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfPriceC1ActionPerformed"/>
           </Events>
         </Component>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.JButton" name="btnBack">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Volver"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JPanel" name="pnlMidRange1">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="lblMidRange1" min="-2" pref="94" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="LifeC4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfLifeM1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="priceC4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfPriceM1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="spaceC4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfSpacesM1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="HitsC4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfHitsM1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="levelC4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="7" max="32767" attributes="0"/>
-                                  <Component id="txfLevelM1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="nameMidRange1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="nameMidRange1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LifeC4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLifeM1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="HitsC4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfHitsM1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spaceC4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfSpacesM1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="levelC4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLevelM1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="priceC4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfPriceM1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="lblMidRange1" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblMidRange1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="MidRange1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="nameMidRange1">
+        <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
+              <Font name="Tahoma" size="12" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Archer - MidRange"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="LifeC4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Vida:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="HitsC4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Golpes p/s:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="spaceC4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Espacios: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="levelC4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nivel de aparici&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="priceC4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Precio:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLifeM1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLifeM1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfSpacesM1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfSpacesM1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfHitsM1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfHitsM1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLevelM1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLevelM1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfPriceM1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfPriceM1ActionPerformed"/>
-          </Events>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="pnlContact2">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblContact2" min="-2" pref="94" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="LifeC2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfLifeC2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="priceC2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfPriceC2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="spaceC2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfSpacesC2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="HitsC2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfHitsC2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="levelC2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
-                          <Component id="txfLevelC2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="nameContact2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="nameContact2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LifeC2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLifeC2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="HitsC2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfHitsC2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spaceC2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfSpacesC2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="levelC2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLevelC2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="priceC2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfPriceC2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="lblContact2" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblContact2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Contact1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="nameContact2">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="PEKKA - Contact Soldier"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="LifeC2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Vida:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="HitsC2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Golpes p/s:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="spaceC2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Espacios: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="levelC2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nivel de aparici&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="priceC2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Precio:"/>
+            <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txfLifeC2">
@@ -759,909 +399,42 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLifeC2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txfSpacesC2">
+        <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfSpacesC2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfHitsC2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfHitsC2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLevelC2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLevelC2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfPriceC2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfPriceC2ActionPerformed"/>
-          </Events>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="pnlAerial1">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblAerial1" min="-2" pref="94" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="LifeC3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfLifeA1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="priceC3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfPriceA1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="spaceC3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfSpacesA1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="HitsC3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfHitsA1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="levelC3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
-                          <Component id="txfLevelA1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-                  <Component id="nameAerial1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="nameAerial1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LifeC3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLifeA1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="HitsC3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfHitsA1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spaceC3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfSpacesA1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="levelC3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLevelA1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="priceC3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfPriceA1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="lblAerial1" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblAerial1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Aerial1"/>
+            <Property name="text" type="java.lang.String" value="Tipo:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="nameAerial1">
+        <Component class="javax.swing.JComboBox" name="jComboBox1">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="5">
+                <StringItem index="0" value="A&#xe9;reo"/>
+                <StringItem index="1" value="De contacto"/>
+                <StringItem index="2" value="Mediano alcance"/>
+                <StringItem index="3" value="De choque"/>
+                <StringItem index="4" value="De impacto"/>
+              </StringArray>
             </Property>
-            <Property name="text" type="java.lang.String" value="Dragon - Aerial"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="LifeC3">
+        <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Vida:"/>
+            <Property name="text" type="java.lang.String" value="jLabel11"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="HitsC3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Golpes p/s:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="spaceC3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Espacios: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="levelC3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nivel de aparici&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="priceC3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Precio:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLifeA1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLifeA1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfSpacesA1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfSpacesA1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfHitsA1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfHitsA1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLevelA1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLevelA1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfPriceA1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfPriceA1ActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="pnlMidRange2">
+    <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="1"/>
         </Property>
+        <Property name="text" type="java.lang.String" value="Volver"/>
       </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="lblMidRange2" min="-2" pref="94" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="LifeC5" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfLifeM2" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="priceC5" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfPriceM2" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="spaceC5" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfSpacesM2" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="HitsC5" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfHitsM2" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="levelC5" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="7" max="32767" attributes="0"/>
-                                  <Component id="txfLevelM2" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="nameMidRange2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="nameMidRange2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LifeC5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLifeM2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="HitsC5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfHitsM2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spaceC5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfSpacesM2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="levelC5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLevelM2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="priceC5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfPriceM2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="lblMidRange2" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblMidRange2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="MidRange2"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="nameMidRange2">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Wizard - MidRange"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="LifeC5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Vida:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="HitsC5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Golpes p/s:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="spaceC5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Espacios: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="levelC5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nivel de aparici&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="priceC5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Precio:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLifeM2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLifeM2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfSpacesM2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfSpacesM2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfHitsM2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfHitsM2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLevelM2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLevelM2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfPriceM2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfPriceM2ActionPerformed"/>
-          </Events>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="pnlCollision1">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblCollision1" min="-2" pref="94" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="LifeC6" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfLifeCo1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="priceC6" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfPriceCo1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="spaceC6" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfSpacesCo1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="HitsC6" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfHitsCo1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="levelC6" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
-                          <Component id="txfLevelCo1" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="nameColision1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="nameColision1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LifeC6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLifeCo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="HitsC6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfHitsCo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spaceC6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfSpacesCo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="levelC6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLevelCo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="priceC6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfPriceCo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="lblCollision1" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblCollision1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Collision1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="nameColision1">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Cannon - De choque"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="LifeC6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Vida:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="HitsC6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Golpes p/s:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="spaceC6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Espacios: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="levelC6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nivel de aparici&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="priceC6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Precio:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLifeCo1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLifeCo1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfSpacesCo1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfSpacesCo1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfHitsCo1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfHitsCo1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLevelCo1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLevelCo1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfPriceCo1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfPriceCo1ActionPerformed"/>
-          </Events>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="pnlAerial2">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="lblAerial2" min="-2" pref="94" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="LifeC7" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfLifeA2" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="priceC7" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfPriceA2" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="spaceC7" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfSpacesA2" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="HitsC7" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfHitsA2" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="levelC7" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="7" max="32767" attributes="0"/>
-                                  <Component id="txfLevelA2" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="nameAerial2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="nameAerial2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LifeC7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLifeA2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="HitsC7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfHitsA2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spaceC7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfSpacesA2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="levelC7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLevelA2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="priceC7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfPriceA2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="lblAerial2" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblAerial2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Aerial2"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="nameAerial2">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Balloon - Aerial"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="LifeC7">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Vida:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="HitsC7">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Golpes p/s:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="spaceC7">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Espacios: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="levelC7">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nivel de aparici&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="priceC7">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Precio:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLifeA2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLifeA2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfSpacesA2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfSpacesA2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfHitsA2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfHitsA2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLevelA2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLevelA2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfPriceA2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfPriceA2ActionPerformed"/>
-          </Events>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="pnlImpact1">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="lblImpact1" min="-2" pref="94" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="LifeC9" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfLifeI1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="priceC9" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfPriceI1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="spaceC9" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfSpacesI1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="HitsC9" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txfHitsI1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="levelC9" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="7" max="32767" attributes="0"/>
-                                  <Component id="txfLevelI1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="nameImpact1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="nameImpact1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LifeC9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLifeI1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="HitsC9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfHitsI1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spaceC9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfSpacesI1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="levelC9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLevelI1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="priceC9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfPriceI1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="lblImpact1" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblImpact1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Impact1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="nameImpact1">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Prince - De impacto"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="LifeC9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Vida:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="HitsC9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Golpes p/s:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="spaceC9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Espacios: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="levelC9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nivel de aparici&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="priceC9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Precio:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLifeI1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLifeI1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfSpacesI1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfSpacesI1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfHitsI1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfHitsI1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLevelI1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLevelI1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfPriceI1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfPriceI1ActionPerformed"/>
-          </Events>
-        </Component>
-      </SubComponents>
-    </Container>
+    </Component>
     <Component class="javax.swing.JButton" name="bntSave">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1670,349 +443,20 @@
         <Property name="text" type="java.lang.String" value="Guardar Configuraci&#xf3;n"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JPanel" name="pnlCollision2">
+    <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Crea un guerrero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFileChooser" name="jFileChooser1">
+      <Properties>
+        <Property name="currentDirectory" type="java.io.File" editor="org.netbeans.beaninfo.editors.FileEditor">
+          <SerializedValue value="-84,-19,0,5,115,114,0,12,106,97,118,97,46,105,111,46,70,105,108,101,4,45,-92,69,14,13,-28,-1,3,0,1,76,0,4,112,97,116,104,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,116,0,80,67,58,92,85,115,101,114,115,92,106,111,115,97,102,92,68,111,99,117,109,101,110,116,115,92,71,105,116,72,117,98,92,85,92,80,89,51,45,80,79,79,45,87,87,84,69,67,92,87,87,84,69,67,92,115,114,99,92,109,101,100,105,97,92,97,116,116,97,99,107,67,111,109,112,111,110,101,110,116,115,119,2,0,92,120"/>
         </Property>
       </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblCollision2" min="-2" pref="94" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="LifeC11" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfLifeCo2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="priceC11" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfPriceCo2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="spaceC11" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfSpacesCo2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="HitsC11" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfHitsCo2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="levelC11" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
-                          <Component id="txfLevelCo2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="nameColision2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="nameColision2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LifeC11" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLifeCo2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="HitsC11" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfHitsCo2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spaceC11" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfSpacesCo2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="levelC11" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLevelCo2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="priceC11" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfPriceCo2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="lblCollision2" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblCollision2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Collision2"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="nameColision2">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Sprinkles- De choque"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="LifeC11">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Vida:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="HitsC11">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Golpes p/s:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="spaceC11">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Espacios: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="levelC11">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nivel de aparici&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="priceC11">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Precio:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLifeCo2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLifeCo2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfSpacesCo2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfSpacesCo2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfHitsCo2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfHitsCo2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLevelCo2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLevelCo2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfPriceCo2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfPriceCo2ActionPerformed"/>
-          </Events>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="pnlImpact2">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblImpact2" min="-2" pref="94" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="LifeC12" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfLifeI2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="priceC12" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfPriceI2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="spaceC12" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfSpacesI2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="HitsC12" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txfHitsI2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="levelC12" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
-                          <Component id="txfLevelI2" min="-2" pref="54" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                  <Component id="nameImpact2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="nameImpact2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LifeC12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLifeI2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="HitsC12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfHitsI2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="spaceC12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfSpacesI2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="levelC12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfLevelI2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="priceC12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfPriceI2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="lblImpact2" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblImpact2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Impact2"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="nameImpact2">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Hog Rider - De impacto"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="LifeC12">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Vida:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="HitsC12">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Golpes p/s:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="spaceC12">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Espacios: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="levelC12">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nivel de aparici&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="priceC12">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Precio:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLifeI2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLifeI2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfSpacesI2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfSpacesI2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfHitsI2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfHitsI2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfLevelI2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfLevelI2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfPriceI2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="0"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfPriceI2ActionPerformed"/>
-          </Events>
-        </Component>
-      </SubComponents>
-    </Container>
+    </Component>
   </SubComponents>
 </Form>
