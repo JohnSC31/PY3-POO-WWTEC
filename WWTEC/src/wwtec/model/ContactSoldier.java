@@ -11,20 +11,14 @@ import javax.swing.ImageIcon;
  *
  * @author josa
  */
-public class ContactSoldier extends Army{
+public class ContactSoldier {
     
     
 
     public ContactSoldier(String name, int life, int hit, int level, int spaces, int apparitionLevel, int price) {
-        super(name, life, hit, level, spaces, apparitionLevel, price);
+        
     }
     
     
-    
-    
-    @Override
-    public void attack() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

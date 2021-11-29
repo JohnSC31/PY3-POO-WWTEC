@@ -61,6 +61,14 @@ public class Game {
         AIR
     }
     
+    public enum ComponentAtackType {
+        AERIAL,
+        COLLISION,
+        CONTACT,
+        IMPACT,
+        MIDRANGE
+    }
+    
     public Game(String playerName){
         this.level = 1;
         this.playerName = playerName;

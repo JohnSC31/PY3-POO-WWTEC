@@ -7,15 +7,17 @@ package wwtec.model;
 
 import interfaces.iAttack;
 import javax.swing.ImageIcon;
+import wwtec.model.Game.ComponentAtackType;
 
 /**
  *
  * @author josa
  */
-public abstract class Army implements iAttack{
+public class Army extends GameEntity implements iAttack{
     
     private String name;
     //private ImageIcon aparence;
+    private ComponentAtackType armyType;
     private int life; 
     private int hit; // cantidad de golpes por segundo
     private int level; // nivel de aparición
@@ -23,22 +25,23 @@ public abstract class Army implements iAttack{
     private int apparitionLevel;
     private int price; 
 
-    public Army(String name, int life, int hit, int level, int spaces, int apparitionLevel, int price) {
+    public Army(String name, int life, int hit, int spaces, int apparitionLevel, int price, ImageIcon icon) {
+        super(0, 0, icon, life, false);
         this.name = name;
-        //this.aparence = aparence;
         this.life = life;
         this.hit = hit;
-        this.level = level;
+        this.level = 1;
         this.spaces = spaces;
         this.apparitionLevel = apparitionLevel;
         this.price = price;
     }
+
+    
     
     public void print(){
         System.out.println("Nombre: " + name + " Vida: " + life + " Golpes por s.: " + hit + " Espacios: " + spaces + " Nivel de aparicion: " + apparitionLevel + " Precio: " + price);
     
     }
-    
     
     public String getName() {
         return name;
@@ -47,8 +50,6 @@ public abstract class Army implements iAttack{
     public void setName(String name) {
         this.name = name;
     }
-
-    
 
     public int getLife() {
         return life;
@@ -96,6 +97,11 @@ public abstract class Army implements iAttack{
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public void attack() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

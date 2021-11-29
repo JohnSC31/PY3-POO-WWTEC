@@ -5,20 +5,10 @@
  */
 package wwtec.model;
 
-import javax.swing.ImageIcon;
-
 /**
  *
  * @author josa
  */
-public class Aerial{
-   
-
-    public Aerial(String name, int live, int hit, int level, int spaces, int apparitionLevel, int price) {
-        
-    }
-    
-    
-    
+interface clonable {
     
 }
