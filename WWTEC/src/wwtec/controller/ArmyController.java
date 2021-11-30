@@ -4,6 +4,8 @@ package wwtec.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import wwtec.model.Army;
@@ -17,12 +19,16 @@ public class ArmyController implements ActionListener{
     private MainController mainController;
     private Game game;
     private ArrayList<JButton> buyButtons;
+    public static ArrayList<Army> buyedArmy;
+    private ArrayList<JLabel> armyCount;
 
     public ArmyController(ArmyWindow view, MainController mainController, Game game) {
         this.view = view;
         this.mainController = mainController;
         this.game = game;
         this.buyButtons = new ArrayList<>();
+        this.buyedArmy = new ArrayList<>();
+        this.armyCount = new ArrayList<>();
         _init_();
     }
     
@@ -57,6 +63,8 @@ public class ArmyController implements ActionListener{
             view.getPnlMyArmy().add(cantidad);
             view.getPnlMyArmy().add(armyName2);
             y += 25;
+            armyCount.add(cantidad);
+            buyButton.addActionListener(this);
             buyButtons.add(buyButton);
         }
         
@@ -69,7 +77,19 @@ public class ArmyController implements ActionListener{
         if(e.getSource().equals(view.getBtnBack())){
             mainController.closeWindow(view);
             mainController.getGameController().refreshGameData();
+            game.generateArmy();
         }
+        
+        for (int i = 0; i < buyButtons.size(); i++) {
+            if(e.getSource().equals(buyButtons.get(i))){
+                try {
+                    buyedArmy.add((Army)ConfigController.armyArray.get(i).clone());
+                    armyCount.get(i).setText((Integer.parseInt(armyCount.get(i).getText()) + 1 ) + "");
+            } catch (CloneNotSupportedException ex) {
+                Logger.getLogger(ArmyController.class.getName()).log(Level.SEVERE, null, ex);
+            }}
+        }
+        
     }
     
     

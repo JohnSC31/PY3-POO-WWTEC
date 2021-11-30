@@ -21,8 +21,6 @@ public class ArmyWindow extends javax.swing.JFrame implements iWindow{
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         pnlMyArmy = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         pnlArmy = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -39,28 +37,15 @@ public class ArmyWindow extends javax.swing.JFrame implements iWindow{
         pnlMyArmy.setBackground(new java.awt.Color(255, 255, 255));
         pnlMyArmy.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel2.setText("Nombre comp ataque");
-
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("0");
-
         javax.swing.GroupLayout pnlMyArmyLayout = new javax.swing.GroupLayout(pnlMyArmy);
         pnlMyArmy.setLayout(pnlMyArmyLayout);
         pnlMyArmyLayout.setHorizontalGroup(
             pnlMyArmyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlMyArmyLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 231, Short.MAX_VALUE)
         );
         pnlMyArmyLayout.setVerticalGroup(
             pnlMyArmyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlMyArmyLayout.createSequentialGroup()
-                .addGroup(pnlMyArmyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 429, Short.MAX_VALUE))
+            .addGap(0, 451, Short.MAX_VALUE)
         );
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -142,8 +127,6 @@ public class ArmyWindow extends javax.swing.JFrame implements iWindow{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;

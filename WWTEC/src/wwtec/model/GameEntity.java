@@ -4,7 +4,7 @@ package wwtec.model;
 import javax.swing.ImageIcon;
 
 
-public abstract class GameEntity {
+public abstract class GameEntity implements Cloneable{
     
     private int iCoord;
     private int jCoord; // posiicion en la matriz de la ventana
@@ -34,6 +34,15 @@ public abstract class GameEntity {
         this.dead = true;
     }
     
+    public Object clone() throws CloneNotSupportedException{
+        Object obj = null;
+        try{
+            obj= super.clone();
+        }catch(CloneNotSupportedException ex){
+            System.out.println(" no se puede duplicar");
+        }
+        return obj;
+    }
     
     // ------------------------------------- GETTERS AND SETTERS --------------------------------------------
 
