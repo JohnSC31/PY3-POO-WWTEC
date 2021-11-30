@@ -4,10 +4,13 @@ package wwtec.model;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import wwtec.controller.ArmyController;
+import wwtec.controller.ConfigController;
 import wwtec.controller.MainController;
 
 
@@ -59,6 +62,14 @@ public class Game {
     public enum ArmyType {
         LAND, 
         AIR
+    }
+    
+    public enum ComponentAtackType {
+        AERIAL,
+        COLLISION,
+        CONTACT,
+        IMPACT,
+        MIDRANGE
     }
     
     public Game(String playerName){
@@ -138,6 +149,25 @@ public class Game {
             
             displayElementBattlefield(new Defense(iPos, jPos, icon, life, objType, range, damage, name, passThrough, this.battleField));
         }
+    }
+    
+    public void generateArmy(){
+        int iPos, jPos;
+        ArrayList<Army> army = ArmyController.buyedArmy;
+        int armyPos[] = {0,1,2,18,19,20};
+        for(int i = 0; i < army.size(); i++){
+            do{
+                iPos = armyPos[new Random().nextInt(armyPos.length)];
+                jPos = armyPos[new Random().nextInt(armyPos.length)];
+            
+            }while(!validElementBattlefield(iPos, jPos));
+            army.get(i).setiCoord(iPos);
+            army.get(i).setjCoord(jPos);
+            displayElementBattlefield(army.get(i));
+            
+        }
+    
+    
     }
     
     

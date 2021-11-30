@@ -74,5 +74,10 @@ public class GameController implements ActionListener{
         // actualizar datos del ejercito (cantidad actual/ total disponible)
         // actualizar el dinero
     }
+
+    public Game getGame() {
+        return game;
+    }
+    
     
 }
