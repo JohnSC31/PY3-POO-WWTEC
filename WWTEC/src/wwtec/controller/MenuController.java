@@ -37,7 +37,7 @@ public class MenuController implements ActionListener, KeyListener{
         if(e.getSource().equals(view.getBtnPlay())){
             // se presiona jugar
             // creamos una nueva partida con el nombre del jugador
-            mainController.startGame(new Game(view.getTxtfPlayerName().getText())); // se inicia un nuevo juego
+            mainController.startGame(new Game(view.getTxtfPlayerName().getText(), mainController.getConfiguration())); // se inicia un nuevo juego
         }
         
         if(e.getSource().equals(view.getBtnLoadGame())){

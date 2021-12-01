@@ -33,6 +33,7 @@ public class MainController {
     private GamesController gamesController;
     
     public MainController(){
+        this.configuration = new Configuration();
         startMenu();
     }
     
@@ -109,6 +110,10 @@ public class MainController {
 
     public GameController getGameController() {
         return gameController;
+    }
+
+    public Configuration getConfiguration() {
+        return configuration;
     }
     
     

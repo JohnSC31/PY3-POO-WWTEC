@@ -21,6 +21,7 @@ public class ArmyController implements ActionListener{
     private ArrayList<JButton> buyButtons;
     public static ArrayList<Army> buyedArmy;
     private ArrayList<JLabel> armyCount;
+    private int armyCounter;
 
     public ArmyController(ArmyWindow view, MainController mainController, Game game) {
         this.view = view;
@@ -29,6 +30,7 @@ public class ArmyController implements ActionListener{
         this.buyButtons = new ArrayList<>();
         this.buyedArmy = new ArrayList<>();
         this.armyCount = new ArrayList<>();
+        this.armyCounter = 0;
         _init_();
     }
     
@@ -37,6 +39,13 @@ public class ArmyController implements ActionListener{
         chargeArmy();
         view.getBtnBack().addActionListener(this);
         // carga los datos del ejercito actual, del dinero y todo lo demas
+        setData();
+    }
+    
+    // setea el valor del presupuesto y la cantidad para el ejercito en los labels correspondientes
+    private void setData(){
+        this.view.getLblBudget().setText("Presupueto: " + this.game.getBudget());
+        this.view.getLblArmySpace().setText("Espacio: " + this.armyCounter + "/" + this.game.getMaxArmy());
     }
     
     
@@ -77,17 +86,24 @@ public class ArmyController implements ActionListener{
         if(e.getSource().equals(view.getBtnBack())){
             mainController.closeWindow(view);
             mainController.getGameController().refreshGameData();
-            game.generateArmy();
         }
         
         for (int i = 0; i < buyButtons.size(); i++) {
-            if(e.getSource().equals(buyButtons.get(i))){
-                try {
-                    buyedArmy.add((Army)ConfigController.armyArray.get(i).clone());
-                    armyCount.get(i).setText((Integer.parseInt(armyCount.get(i).getText()) + 1 ) + "");
-            } catch (CloneNotSupportedException ex) {
-                Logger.getLogger(ArmyController.class.getName()).log(Level.SEVERE, null, ex);
-            }}
+                if(e.getSource().equals(buyButtons.get(i))){
+                    try {
+                        if(this.game.getBudget() - ConfigController.armyArray.get(i).getPrice() >= 0 && this.armyCounter + ConfigController.armyArray.get(i).getSpaces() <= this.game.getMaxArmy()){
+                            this.game.setBudget(this.game.getBudget() - ConfigController.armyArray.get(i).getPrice());
+                            this.armyCounter += ConfigController.armyArray.get(i).getSpaces();
+                            buyedArmy.add((Army)ConfigController.armyArray.get(i).clone());
+                            armyCount.get(i).setText((Integer.parseInt(armyCount.get(i).getText()) + 1 ) + "");
+                            
+                            setData();
+                        }
+
+                } catch (CloneNotSupportedException ex) {
+                    Logger.getLogger(ArmyController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
         
     }
