@@ -48,7 +48,7 @@ public class ConfigController implements ActionListener {
         // action listeners
         view.getBtnBack().addActionListener(this);
         view.getBntSave().addActionListener(this);
-        //setArmyArray();
+        setArmyArray();
         // seteando los valores de la configuracion
         view.getTxtfMinDefenseIncrease().setText(this.config.getMinDefenseIncrease() + "");
         view.getTxtfMaxDefenseIncrease().setText(this.config.getMaxDefenseIncrease() + "");
