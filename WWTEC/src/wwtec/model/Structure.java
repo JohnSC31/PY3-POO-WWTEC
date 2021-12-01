@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 
 abstract class Structure extends GameEntity{
 
-    public Structure(int i, int j, ImageIcon icon, int life, boolean passThrough) {
+    public Structure(int i, int j, String icon, int life, boolean passThrough) {
         super(i, j, icon, life, passThrough);
     }
     

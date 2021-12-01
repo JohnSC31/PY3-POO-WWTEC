@@ -19,7 +19,6 @@ public class Army extends GameEntity implements iAttack{
     private String name;
     //private ImageIcon aparence;
     private ComponentAtackType componentAtackType;
-    private int life; 
     private int hit; // cantidad de golpes por segundo
     private int level; // nivel de aparición
     private int spaces; // espacios que ocupa
@@ -27,10 +26,9 @@ public class Army extends GameEntity implements iAttack{
     private int price;
     private ArmyType armyType;
 
-    public Army(String name, int life, int hit, int spaces, int apparitionLevel, int price, ImageIcon icon, ComponentAtackType componentAtackType, ArmyType armyType ) {
+    public Army(String name, int life, int hit, int spaces, int apparitionLevel, int price, String icon, ComponentAtackType componentAtackType, ArmyType armyType ) {
         super(0, 0, icon, life, false);
         this.name = name;
-        this.life = life;
         this.hit = hit;
         this.level = 1;
         this.spaces = spaces;
@@ -43,7 +41,7 @@ public class Army extends GameEntity implements iAttack{
     
     
     public void print(){
-        System.out.println("Nombre: " + name + " Vida: " + life + " Golpes por s.: " + hit + " Espacios: " + spaces + " Nivel de aparicion: " + apparitionLevel + " Precio: " + price + " ArmyType: " + armyType);
+        System.out.println("Nombre: " + name  + " Golpes por s.: " + hit + " Espacios: " + spaces + " Nivel de aparicion: " + apparitionLevel + " Precio: " + price + " ArmyType: " + armyType);
     
     }
     
@@ -53,14 +51,6 @@ public class Army extends GameEntity implements iAttack{
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getLife() {
-        return life;
-    }
-
-    public void setLife(int life) {
-        this.life = life;
     }
 
     public int getHit() {

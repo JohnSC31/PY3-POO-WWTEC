@@ -16,7 +16,7 @@ public class Defense extends Structure implements iAttack{
     // thread para el ataque
     private DefenseThread defenseThread;
     
-    public Defense(int i, int j, ImageIcon icon, int life, ArmyType objType, int range, int damage, String name, boolean passThrough, BattleCell[][] battleField) {
+    public Defense(int i, int j, String icon, int life, ArmyType objType, int range, int damage, String name, boolean passThrough, BattleCell[][] battleField) {
         super(i, j, icon, life, passThrough);
         this.objType = objType;
         this.range = range;

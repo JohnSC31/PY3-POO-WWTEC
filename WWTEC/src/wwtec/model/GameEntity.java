@@ -8,12 +8,12 @@ public abstract class GameEntity implements Cloneable{
     
     private int iCoord;
     private int jCoord; // posiicion en la matriz de la ventana
-    private ImageIcon icon; // representacion basica visua del elemento
+    private String icon; // representacion basica visua del elemento
     private int life;
     private boolean passThrough;
     private boolean dead; // indica si el elemento ha sido destruido o esta muerto
 
-    public GameEntity(int iCoord, int jCoord, ImageIcon icon, int life, boolean passThrough) {
+    public GameEntity(int iCoord, int jCoord, String icon, int life, boolean passThrough) {
         this.iCoord = iCoord;
         this.jCoord = jCoord;
         this.icon = icon;
@@ -63,11 +63,7 @@ public abstract class GameEntity implements Cloneable{
     }
 
     public ImageIcon getIcon() {
-        return icon;
-    }
-
-    public void setIcon(ImageIcon icon) {
-        this.icon = icon;
+        return new ImageIcon(icon);
     }
 
     public int getLife() {
