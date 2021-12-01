@@ -19,8 +19,9 @@ public class ConfigController implements ActionListener {
     
     ConfigWindow view;
     MainController mainController;
+    Configuration config;
     
-    public static ArrayList<Army> armyArray;
+    public static ArrayList<Army> armyArray = new ArrayList<>();
     private final Gson gson = new Gson();
     private final String ARMYFILEPATH = "./src/media/army.txt";
     private Army dragon, balloon, cannon, sprinkles, barbarian, pekka, prince, hogRider, archer, wizard;
@@ -39,7 +40,7 @@ public class ConfigController implements ActionListener {
     public ConfigController(ConfigWindow view, MainController mainController){
         this.view = view;
         this.mainController = mainController;
-        this.armyArray = new ArrayList<>();
+        this.config = mainController.getConfiguration();
         _init_();
     }
     
@@ -47,13 +48,14 @@ public class ConfigController implements ActionListener {
         // action listeners
         view.getBtnBack().addActionListener(this);
         view.getBntSave().addActionListener(this);
+        
+        // seteando los valores de la configuracion
+        view.getTxtfMinDefenseIncrease().setText(this.config.getMinDefenseIncrease() + "");
+        view.getTxtfMaxDefenseIncrease().setText(this.config.getMaxDefenseIncrease() + "");
+        view.getTxtfMinBootyIncrease().setText(this.config.getMinBootyIncrease() + "");
+        view.getTxtfMaxBootyIncrease().setText(this.config.getMaxBootyIncrease() + "");
+        
     }
-    
-    
-    
-    
-    
-    
     
     private void addCharacter() throws IOException{
         String name = view.getTxfName().getText();
@@ -93,7 +95,15 @@ public class ConfigController implements ActionListener {
         return armyArray;
     }
     
-    
+      // resetea los campos cuando se cree el componente de ataque
+    private void resetAttackComponentForm(){
+        view.getTxfName().setText("");
+        view.getTxfLevel().setText("");
+        view.getTxfLife().setText("");
+        view.getTxfHits().setText("");
+        view.getTxfSpaces().setText("");
+        view.getTxfPrice().setText("");
+    }
     
     
     
@@ -103,6 +113,10 @@ public class ConfigController implements ActionListener {
         
         if(e.getSource().equals(view.getBtnBack())){
             // guardar la configuracion
+            this.config.setMinDefenseIncrease(Integer.parseInt(view.getTxtfMinDefenseIncrease().getText()));
+            this.config.setMaxDefenseIncrease(Integer.parseInt(view.getTxtfMaxDefenseIncrease().getText()));
+            this.config.setMinBootyIncrease(Integer.parseInt(view.getTxtfMinBootyIncrease().getText()));
+            this.config.setMaxBootyIncrease(Integer.parseInt(view.getTxtfMaxBootyIncrease().getText()));
             
             mainController.changeWindow(this.view, mainController.getMenuView());
         }
@@ -110,6 +124,7 @@ public class ConfigController implements ActionListener {
         else if(e.getSource().equals(view.getBntSave())){
             try {
                 addCharacter();
+                resetAttackComponentForm();
             } catch (IOException ex) {
                 Logger.getLogger(ConfigController.class.getName()).log(Level.SEVERE, null, ex);
             }
