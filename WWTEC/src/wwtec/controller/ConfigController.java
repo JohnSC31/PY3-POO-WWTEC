@@ -14,6 +14,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import wwtec.view.ConfigWindow;
 import wwtec.model.*;
+import wwtec.model.Game.ArmyType;
+import wwtec.model.Game.ComponentAtackType;
 
 public class ConfigController implements ActionListener {
     
@@ -64,9 +66,38 @@ public class ConfigController implements ActionListener {
         int hits = Integer.parseInt(view.getTxfHits().getText());
         int spaces = Integer.parseInt(view.getTxfSpaces().getText());
         int price = Integer.parseInt(view.getTxfPrice().getText());
+        String type = view.getjCmbType().getModel().getElementAt(view.getjCmbType().getSelectedIndex());
+        ArmyType armyType = ArmyType.LAND;
+        ComponentAtackType componentType = ComponentAtackType.CONTACT;
         
+        
+        switch (type) {
+            case "De contacto":
+                armyType = ArmyType.LAND;
+                componentType = ComponentAtackType.CONTACT;
+                break;
+            case "Mediado alcance":
+                armyType = ArmyType.LAND;
+                componentType = ComponentAtackType.MIDRANGE;
+                break;
+            case "Aéreo":
+                armyType = ArmyType.AIR;
+                componentType = ComponentAtackType.MIDRANGE;
+                break;
+            case "De Choque":
+                armyType = ArmyType.LAND;
+                componentType = ComponentAtackType.COLLISION;
+                break;
+            case "De impacto":
+                armyType = ArmyType.LAND;
+                componentType = ComponentAtackType.IMPACT;
+                break;
+            default:
+                break;
+        }
+            
         if (armyArray.isEmpty())
-            armyArray.add(new Army(name,life, hits, spaces, level, price, new ImageIcon(view.getjFileChooser().getSelectedFile().getCanonicalPath())));
+            armyArray.add(new Army(name,life, hits, spaces, level, price, new ImageIcon(view.getjFileChooser().getSelectedFile().getCanonicalPath()),componentType,armyType));
         
         else{
             boolean contains = false;
@@ -77,7 +108,7 @@ public class ConfigController implements ActionListener {
                     break;}
             }
             if (!contains)
-                armyArray.add(new Army(name,life, hits, spaces, level, price, new ImageIcon(view.getjFileChooser().getSelectedFile().getCanonicalPath())));
+                armyArray.add(new Army(name,life, hits, spaces, level, price, new ImageIcon(view.getjFileChooser().getSelectedFile().getCanonicalPath()),componentType,armyType));
                 
         }
         
