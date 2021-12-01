@@ -50,6 +50,7 @@ public class ArmyController implements ActionListener{
     
     
     private void chargeArmy(){
+        ConfigController.setArmyArray();
         ArrayList<Army> armyArray = ConfigController.armyArray;
         int x = 15;
         int y = 10;

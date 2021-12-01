@@ -24,10 +24,8 @@ public class ConfigController implements ActionListener {
     Configuration config;
     
     public static ArrayList<Army> armyArray = new ArrayList<>();
-    private final Gson gson = new Gson();
-    private final String ARMYFILEPATH = "./src/media/army.txt";
-    private Army dragon, balloon, cannon, sprinkles, barbarian, pekka, prince, hogRider, archer, wizard;
-    private ImageIcon dragonIcon, balloonIcon, cannonIcon, sprinklesIcon, barbarianIcon, pekkaIcon, princeIcon, hogRiderIcon, archerIcon, wizardIcon;
+    private static Gson gson = new Gson();
+    private static String ARMYFILEPATH = "./src/media/army.txt";
     
     /*private Aerial balloon;
     private Collision cannon;
@@ -50,7 +48,7 @@ public class ConfigController implements ActionListener {
         // action listeners
         view.getBtnBack().addActionListener(this);
         view.getBntSave().addActionListener(this);
-        
+        //setArmyArray();
         // seteando los valores de la configuracion
         view.getTxtfMinDefenseIncrease().setText(this.config.getMinDefenseIncrease() + "");
         view.getTxtfMaxDefenseIncrease().setText(this.config.getMaxDefenseIncrease() + "");
@@ -97,7 +95,7 @@ public class ConfigController implements ActionListener {
         }
             
         if (armyArray.isEmpty())
-            armyArray.add(new Army(name,life, hits, spaces, level, price, new ImageIcon(view.getjFileChooser().getSelectedFile().getCanonicalPath()),componentType,armyType));
+            armyArray.add(new Army(name,life, hits, spaces, level, price, view.getjFileChooser().getSelectedFile().getCanonicalPath(),componentType,armyType));
         
         else{
             boolean contains = false;
@@ -108,22 +106,25 @@ public class ConfigController implements ActionListener {
                     break;}
             }
             if (!contains)
-                armyArray.add(new Army(name,life, hits, spaces, level, price, new ImageIcon(view.getjFileChooser().getSelectedFile().getCanonicalPath()),componentType,armyType));
+                armyArray.add(new Army(name,life, hits, spaces, level, price, view.getjFileChooser().getSelectedFile().getCanonicalPath(),componentType,armyType));
                 
         }
         
         for (Army a : armyArray)
             a.print();
+        
+        saveArmyArray();
     }
     
     
     private void saveArmyArray(){
-        String matchJSON = gson.toJson(armyArray);
-        FileManager.writeToFile(ARMYFILEPATH, matchJSON);
+        String JSON = gson.toJson(armyArray);
+        FileManager.writeToFile(ARMYFILEPATH, JSON);
     }
 
-    public ArrayList<Army> getArmyArray() {
-        return armyArray;
+    public static void setArmyArray() {
+        String armyStr = FileManager.readFile(ARMYFILEPATH);
+        armyArray = gson.fromJson(armyStr, new TypeToken<ArrayList<Army>>(){}.getType());
     }
     
       // resetea los campos cuando se cree el componente de ataque

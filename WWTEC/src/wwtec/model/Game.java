@@ -32,13 +32,13 @@ public class Game {
     private int budget; // dinero del jugador
     
     // imagenes de las defensa
-    public final String townHallIcon = "TownHall.png";
-    public final String airDefenseIcon = "Air_Defense.png";
-    public final String bombIcon = "Bomb.png";
-    public final String cannonIcon = "Cannon.png";
-    public final String mortarIcon = "Mortar.png";
-    public final String towerIcon = "Tower.png";
-    public final String wallIcon = "Wall.png";
+    public final String townHallIcon = "./src/media/TownHall.png";
+    public final String airDefenseIcon = "./src/media/Air_Defense.png";
+    public final String bombIcon = "./src/media/Bomb.png";
+    public final String cannonIcon = "./src/media/Cannon.png";
+    public final String mortarIcon = "./src/media/Mortar.png";
+    public final String towerIcon = "./src/media/Tower.png";
+    public final String wallIcon = "./src/media/Wall.png";
     
     // variables para el crecimiento de la aldeas
     private int townHallBooty = 1000; // dato inicial
@@ -111,16 +111,16 @@ public class Game {
     public void generateVillage(){
         unsetVillage();
         generateVillageWalls();
-        displayElementBattlefield(new TownHall(10, 10, loadDefenseImage(this.townHallIcon), 100, townHallBooty)); // en el centro
+        displayElementBattlefield(new TownHall(10, 10, this.townHallIcon, 100, townHallBooty)); // en el centro
         generateVillageDefenses();
     }
     
     private void generateVillageWalls(){
         for(int i = VILLAGE_MIN; i <= VILLAGE_MAX; i++){
-            displayElementBattlefield(new Wall(VILLAGE_MIN, i, loadDefenseImage(this.wallIcon), 50)); // horizontal arriba
-            displayElementBattlefield(new Wall(VILLAGE_MAX, i, loadDefenseImage(this.wallIcon), 50)); // horizontal abajos
-            displayElementBattlefield(new Wall(i, VILLAGE_MIN, loadDefenseImage(this.wallIcon), 50)); // vertical izquierda
-            displayElementBattlefield(new Wall(i, VILLAGE_MAX, loadDefenseImage(this.wallIcon), 50)); // vertical derecha
+            displayElementBattlefield(new Wall(VILLAGE_MIN, i, this.wallIcon, 50)); // horizontal arriba
+            displayElementBattlefield(new Wall(VILLAGE_MAX, i, this.wallIcon, 50)); // horizontal abajos
+            displayElementBattlefield(new Wall(i, VILLAGE_MIN, this.wallIcon, 50)); // vertical izquierda
+            displayElementBattlefield(new Wall(i, VILLAGE_MAX, this.wallIcon, 50)); // vertical derecha
         }
     }
     
@@ -134,16 +134,16 @@ public class Game {
     }
     
     private void generateVillageDefenses(){
-        generateVillageDefense(4, loadDefenseImage(this.cannonIcon), cannonLife, ArmyType.LAND, 5, cannonDamage, "Cannon", false); // 4 canones
-        generateVillageDefense(2, loadDefenseImage(this.mortarIcon), mortarLife, ArmyType.LAND, 10, mortarDamage, "Mortar", false); // 2 morteros
-        generateVillageDefense(1, loadDefenseImage(this.airDefenseIcon), airDefenseLife, ArmyType.LAND, 15, airDefenseDamage, "AirDefense", false); // 1 defensa aerea
-        generateVillageDefense(3, loadDefenseImage(this.towerIcon), towerLife, ArmyType.LAND, 6, towerDamage, "Tower", false); // 3 torres
-        generateVillageDefense(2, loadDefenseImage(this.bombIcon), bombLife, ArmyType.LAND, 2, bombDamage, "Bomb", true); // 2 bombas
+        generateVillageDefense(4, this.cannonIcon, cannonLife, ArmyType.LAND, 5, cannonDamage, "Cannon", false); // 4 canones
+        generateVillageDefense(2, this.mortarIcon, mortarLife, ArmyType.LAND, 10, mortarDamage, "Mortar", false); // 2 morteros
+        generateVillageDefense(1, this.airDefenseIcon, airDefenseLife, ArmyType.LAND, 15, airDefenseDamage, "AirDefense", false); // 1 defensa aerea
+        generateVillageDefense(3, this.towerIcon, towerLife, ArmyType.LAND, 6, towerDamage, "Tower", false); // 3 torres
+        generateVillageDefense(2, this.bombIcon, bombLife, ArmyType.LAND, 2, bombDamage, "Bomb", true); // 2 bombas
         
         
     }
     
-    private void generateVillageDefense(int amount, ImageIcon icon, int life, ArmyType objType, int range, int damage, String name, boolean passThrough){
+    private void generateVillageDefense(int amount, String icon, int life, ArmyType objType, int range, int damage, String name, boolean passThrough){
         int iPos, jPos;
         for(int i = 0; i < amount; i++){
             do{
