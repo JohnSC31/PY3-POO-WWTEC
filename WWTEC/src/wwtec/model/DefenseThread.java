@@ -68,14 +68,23 @@ public class DefenseThread extends Thread{
         for(int i = 0; i < lengthAreaRange; i++){
             for(int j = 0; j < lengthAreaRange; j++){
                 
-                GameEntity cellElement = battleField[iPos][jPos].getElement();
-                if(cellElement != null && cellElement.getClass().equals(Army.class)){
-                    Army armyDetected = (Army) cellElement;
-                    //if(armyDetected.getArmyType.equals(defense.getObjType())){}
+                try{
+                    GameEntity cellElement = battleField[iPos][jPos].getElement();
+                    if(cellElement != null && cellElement.getClass().equals(Army.class)){
+                        Army armyDetected = (Army) cellElement;
+                        if(armyDetected.getArmyType().equals(defense.getObjType())){
+                            // hacer un if para el tipo de tropa si es aereo o terrestre
+                            this.objective = (Army) cellElement; // se fija el objetivo 
+                        }else{
+                            System.out.println("Enemigo inalcanzable");
+                        }
+
+
+                    }
+                
+                }catch(ArrayIndexOutOfBoundsException e){
                     
-                    // hacer un if para el tipo de tropa si es aereo o terrestre
-                    this.objective = (Army) cellElement; // se fija el objetivo 
-                }
+                }   
                 
                 jPos++;
             }

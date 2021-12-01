@@ -23,7 +23,7 @@ public class Defense extends Structure implements iAttack{
         this.damage = damage;
         this.name = name;
         this.defenseThread = new DefenseThread(this, battleField);
-//        this.defenseThread.start(); // inicio del thread para la defensa
+        this.defenseThread.start();
     }
 
     @Override
