@@ -27,6 +27,7 @@ public class GameController implements ActionListener{
     private void _init_(){
         this.view.getBtnNextLevel().addActionListener(this);
         this.view.getBtnAdminArmy().addActionListener(this);
+        this.view.getBtnAttack().addActionListener(this);
         
         setBattleField();
     }
@@ -61,6 +62,10 @@ public class GameController implements ActionListener{
         if(e.getSource().equals(this.view.getBtnAdminArmy())){
             mainController.startAdminArmy(game);
         }
+        
+        if(e.getSource().equals(this.view.getBtnAttack())){
+            game.generateArmy(); // desplegar el armamento
+        }
     }
     
     // actualiza en la pantalla los valores del juego
@@ -70,7 +75,7 @@ public class GameController implements ActionListener{
         
         this.view.getLblLevel().setText("Nivel " + game.getLevel());
         this.view.getLblBooty().setText(game.getTownHallBooty() + "");
-        
+        this.view.getLblBudget().setText(game.getBudget() + "");
         // actualizar datos del ejercito (cantidad actual/ total disponible)
         // actualizar el dinero
     }

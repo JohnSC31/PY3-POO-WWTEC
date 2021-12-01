@@ -27,8 +27,9 @@ public class Game {
     //private MainController mainController; (no veo la necesidad de la referencia del controlador principal)
     private int level;
     private BattleCell[][] battleField; // campo de batalla, compuesto de celdas de batalla
-    // private ejercito
+    private int maxArmy = 20;
     private Village village;
+    private int budget; // dinero del jugador
     
     // imagenes de las defensa
     public final String townHallIcon = "TownHall.png";
@@ -72,9 +73,13 @@ public class Game {
         MIDRANGE
     }
     
-    public Game(String playerName){
+    private Configuration config;
+    
+    public Game(String playerName, Configuration config){
         this.level = 1;
         this.playerName = playerName;
+        this.budget = 5000;
+        this.config = config;
         // inicializacion del campo de batalla
         initBattleField();
         generateVillage(); // se genera la aldea inicial
@@ -201,25 +206,28 @@ public class Game {
         this.level++;
         
         // aumento del botin aumento del actual entre un 100 y un 250 % esos numeros deben venir de las configuraciones
-        townHallBooty += ((new Random().nextInt(250-100+1) + 100) * townHallBooty / 100);
+        townHallBooty += ((new Random().nextInt(config.getMaxBootyIncrease()-config.getMinBootyIncrease()+1) + config.getMinBootyIncrease()) * townHallBooty / 100);
         
         // aumento de la vida y dano de las defensas entre un 50 y 100%
-        airDefenseLife += ((new Random().nextInt(100-50+1) + 50) * airDefenseLife / 100);
-        airDefenseDamage += ((new Random().nextInt(100-50+1) + 50) * airDefenseDamage / 100);
+        airDefenseLife += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * airDefenseLife / 100);
+        airDefenseDamage += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * airDefenseDamage / 100);
         
-        bombLife += ((new Random().nextInt(100-50+1) + 50) * bombLife / 100);
-        bombDamage += ((new Random().nextInt(100-50+1) + 50) * bombDamage / 100);
+        bombLife += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * bombLife / 100);
+        bombDamage += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * bombDamage / 100);
         
-        cannonLife += ((new Random().nextInt(100-50+1) + 50) * cannonLife / 100);
-        cannonDamage += ((new Random().nextInt(100-50+1) + 50) * cannonDamage / 100);
+        cannonLife += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * cannonLife / 100);
+        cannonDamage += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * cannonDamage / 100);
         
-        mortarLife += ((new Random().nextInt(100-50+1) + 50) * mortarLife / 100);
-        mortarDamage += ((new Random().nextInt(100-50+1) + 50) * mortarDamage / 100);
+        mortarLife += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * mortarLife / 100);
+        mortarDamage += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * mortarDamage / 100);
         
-        towerLife += ((new Random().nextInt(100-50+1) + 50) * towerLife / 100);
-        towerDamage += ((new Random().nextInt(100-50+1) + 50) * towerDamage / 100);
+        towerLife += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * towerLife / 100);
+        towerDamage += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * towerDamage / 100);
         
-        wallLife += ((new Random().nextInt(100-50+1) + 50) * wallLife / 100);
+        wallLife += ((new Random().nextInt(config.getMaxDefenseIncrease()-config.getMinDefenseIncrease()+1) + config.getMinDefenseIncrease()) * wallLife / 100);
+        
+        // se le suma a los espacio en el ejercito
+        this.maxArmy += 5;
         
     }
     
@@ -239,6 +247,18 @@ public class Game {
 
     public String getPlayerName() {
         return playerName;
+    }
+
+    public int getBudget() {
+        return budget;
+    }
+
+    public void setBudget(int budget) {
+        this.budget = budget;
+    }
+
+    public int getMaxArmy() {
+        return maxArmy;
     }
     
     

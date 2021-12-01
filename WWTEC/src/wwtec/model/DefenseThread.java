@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 public class DefenseThread extends Thread{
     
     private Defense defense;
-    private GameEntity objective; // cambiar por la clase de los componenetes de ataque
+    private Army objective; // cambiar por la clase de los componenetes de ataque
     private BattleCell[][] battleField;
     
     private int lengthAreaRange;
@@ -69,9 +69,12 @@ public class DefenseThread extends Thread{
             for(int j = 0; j < lengthAreaRange; j++){
                 
                 GameEntity cellElement = battleField[iPos][jPos].getElement();
-                if(cellElement != null){
+                if(cellElement != null && cellElement.getClass().equals(Army.class)){
+                    Army armyDetected = (Army) cellElement;
+                    //if(armyDetected.getArmyType.equals(defense.getObjType())){}
+                    
                     // hacer un if para el tipo de tropa si es aereo o terrestre
-                    this.objective = cellElement; // se fija el objetivo 
+                    this.objective = (Army) cellElement; // se fija el objetivo 
                 }
                 
                 jPos++;
@@ -88,8 +91,7 @@ public class DefenseThread extends Thread{
         if(objective.isDead()){
             this.objective = null;
             this.battleField[objective.getiCoord()][objective.getjCoord()].setElement(null); // se elimina de la matriz
-            // para el thread que lo mueve y ataca verificar que no se mueva si esta muerdo
-            // se debe eliminar de la matriz para evitar q
+            this.battleField[objective.getiCoord()][objective.getjCoord()].setIcon(null);
         }
         
         
