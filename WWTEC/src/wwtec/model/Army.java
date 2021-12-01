@@ -8,6 +8,7 @@ package wwtec.model;
 import interfaces.iAttack;
 import javax.swing.ImageIcon;
 import wwtec.model.Game.ComponentAtackType;
+import wwtec.model.Game.ArmyType;
 
 /**
  *
@@ -17,15 +18,16 @@ public class Army extends GameEntity implements iAttack{
     
     private String name;
     //private ImageIcon aparence;
-    private ComponentAtackType armyType;
+    private ComponentAtackType componentAtackType;
     private int life; 
     private int hit; // cantidad de golpes por segundo
     private int level; // nivel de aparición
     private int spaces; // espacios que ocupa
     private int apparitionLevel;
-    private int price; 
+    private int price;
+    private ArmyType armyType;
 
-    public Army(String name, int life, int hit, int spaces, int apparitionLevel, int price, ImageIcon icon) {
+    public Army(String name, int life, int hit, int spaces, int apparitionLevel, int price, ImageIcon icon, ComponentAtackType componentAtackType, ArmyType armyType ) {
         super(0, 0, icon, life, false);
         this.name = name;
         this.life = life;
@@ -34,12 +36,14 @@ public class Army extends GameEntity implements iAttack{
         this.spaces = spaces;
         this.apparitionLevel = apparitionLevel;
         this.price = price;
+        this.armyType = armyType;
+        this.componentAtackType = componentAtackType;
     }
 
     
     
     public void print(){
-        System.out.println("Nombre: " + name + " Vida: " + life + " Golpes por s.: " + hit + " Espacios: " + spaces + " Nivel de aparicion: " + apparitionLevel + " Precio: " + price);
+        System.out.println("Nombre: " + name + " Vida: " + life + " Golpes por s.: " + hit + " Espacios: " + spaces + " Nivel de aparicion: " + apparitionLevel + " Precio: " + price + " ArmyType: " + armyType);
     
     }
     
@@ -99,6 +103,23 @@ public class Army extends GameEntity implements iAttack{
         this.price = price;
     }
 
+    public Game.ArmyType getArmyType() {
+        return armyType;
+    }
+
+    public ComponentAtackType getComponentAtackType() {
+        return componentAtackType;
+    }
+
+    public void setComponentAtackType(ComponentAtackType componentAtackType) {
+        this.componentAtackType = componentAtackType;
+    }
+
+    public void setArmyType(Game.ArmyType armyType) {
+        this.armyType = armyType;
+    }
+    
+    
     @Override
     public void attack() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
